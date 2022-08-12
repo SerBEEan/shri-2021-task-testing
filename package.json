@@ -4,8 +4,10 @@
     "scripts": {
         "start": "nodemon ./src/server/index.ts",
         "test": "jest",
+        "test:ci": "npm run test && npm run hermione",
         "build": "webpack --mode=production --node-env=production",
         "watch": "webpack --watch",
+        "selenium:install": "selenium-standalone install",
         "hermione": "hermione",
         "start:ci": "npm run build && npm run start"
     },
@@ -57,6 +59,7 @@
         "nodemon": "^2.0.13",
         "sass": "^1.42.1",
         "sass-loader": "^12.1.0",
+        "selenium-standalone": "^8.2.0",
         "style-loader": "^3.3.0",
         "ts-loader": "^9.2.6",
         "ts-node": "^10.3.0",
