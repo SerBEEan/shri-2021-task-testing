@@ -22,5 +22,6 @@ module.exports = {
         'html-reporter/hermione': {
             path: 'hermione-html-reporter'
         },
+        'hermione-selenium-standalone-runner': true,
     }
 };

@@ -6,7 +6,8 @@
         "test": "jest",
         "build": "webpack --mode=production --node-env=production",
         "watch": "webpack --watch",
-        "hermione": "hermione"
+        "hermione": "hermione",
+        "start:ci": "npm run build && npm run start"
     },
     "dependencies": {
         "@bem-react/classname": "^1.5.12",
@@ -47,6 +48,7 @@
         "enzyme": "^3.11.0",
         "enzyme-to-json": "^3.6.2",
         "hermione": "^5.0.1",
+        "hermione-selenium-standalone-runner": "file:plugins/hermione-selenium-standalone-runner",
         "html-reporter": "^9.2.0",
         "html-webpack-plugin": "^5.3.2",
         "jest": "^27.3.0",
