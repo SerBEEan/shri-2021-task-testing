@@ -10,7 +10,8 @@
         "moduleResolution": "node"
     },
     "include": [
-        "src"
+        "src",
+        "test/setupTests.js"
     ],
     "ts-node": {
         "compilerOptions": {

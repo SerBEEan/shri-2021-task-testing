@@ -145,7 +145,7 @@ describe('общие', async function() {
         await this.browser.setWindowSize(575, 1000);
 
         await this.browser.$(navbarTogglerSelector).click();
-        const menuDisplay = await this.browser.$(applicationMenu).getCSSProperty('display');
+        const menuDisplay = await this.browser.$(applicationMenuSelector).getCSSProperty('display');
 
         assert.notEqual(menuDisplay.value, 'none');
     });

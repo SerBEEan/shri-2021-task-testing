@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`компоненты снимок карточки товара 1`] = `
+<div
+  className="ProductItem card w-100 mb-4"
+  data-testid={1}
+>
+  <Image
+    className="card-img-top"
+  />
+  <div
+    className="card-body"
+  >
+    <h5
+      className="ProductItem-Name card-title"
+    >
+      product 1
+    </h5>
+    <p
+      className="ProductItem-Price card-text"
+    >
+      $
+      1000
+    </p>
+    <Link
+      className="ProductItem-DetailsLink card-link"
+      to="/catalog/1"
+    >
+      Details
+    </Link>
+    <CartBadge
+      id={1}
+    />
+  </div>
+</div>
+`;
+
+exports[`компоненты снимок корзины с добавленными товарами 1`] = `
+<div
+  className="Cart"
+>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="Shopping cart"
+  />
+  <div
+    className="row mb-4"
+  >
+    <div
+      className="col"
+    >
+      <h1>
+        Shopping cart
+      </h1>
+      <table
+        className="Cart-Table table"
+      >
+        <thead>
+          <tr>
+            <th
+              scope="col"
+            >
+              #
+            </th>
+            <th
+              scope="col"
+            >
+              Product
+            </th>
+            <th
+              scope="col"
+            >
+              Price
+            </th>
+            <th
+              scope="col"
+            >
+              Count
+            </th>
+            <th
+              scope="col"
+            >
+              Total
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            data-testid="1"
+            key="1"
+          >
+            <th
+              className="Cart-Index"
+              scope="row"
+            >
+              1
+            </th>
+            <td
+              className="Cart-Name"
+            >
+              product 1
+            </td>
+            <td
+              className="Cart-Price"
+            >
+              $
+              1000
+            </td>
+            <td
+              className="Cart-Count"
+            >
+              1
+            </td>
+            <td
+              className="Cart-Total"
+            >
+              $
+              1000
+            </td>
+          </tr>
+          <tr
+            data-testid="2"
+            key="2"
+          >
+            <th
+              className="Cart-Index"
+              scope="row"
+            >
+              2
+            </th>
+            <td
+              className="Cart-Name"
+            >
+              product 2
+            </td>
+            <td
+              className="Cart-Price"
+            >
+              $
+              800
+            </td>
+            <td
+              className="Cart-Count"
+            >
+              2
+            </td>
+            <td
+              className="Cart-Total"
+            >
+              $
+              1600
+            </td>
+          </tr>
+          <tr
+            data-testid="3"
+            key="3"
+          >
+            <th
+              className="Cart-Index"
+              scope="row"
+            >
+              3
+            </th>
+            <td
+              className="Cart-Name"
+            >
+              product 3
+            </td>
+            <td
+              className="Cart-Price"
+            >
+              $
+              1500
+            </td>
+            <td
+              className="Cart-Count"
+            >
+              1
+            </td>
+            <td
+              className="Cart-Total"
+            >
+              $
+              1500
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td
+              colSpan={4}
+            >
+              Order price:
+            </td>
+            <td
+              className="Cart-OrderPrice"
+            >
+              $
+              4100
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  <div
+    className="row mb-4"
+  >
+    <div
+      className="col-6"
+    >
+      <button
+        className="Cart-Clear btn btn-outline-secondary"
+        onClick={[Function]}
+      >
+        Clear shopping cart
+      </button>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12 col-sm-8 col-md-6 col-lg-4"
+    >
+      <h2>
+        Сheckout
+      </h2>
+      <Form
+        onSubmit={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`компоненты снимок страницы с деталями товара 1`] = `
+<div
+  className="ProductDetails row"
+>
+  <div
+    className="col-12 col-sm-5 col-lg-4"
+  >
+    <Image />
+  </div>
+  <div
+    className="col-12 col-sm-7 col-lg-6"
+  >
+    <h1
+      className="ProductDetails-Name"
+    >
+      product 1
+    </h1>
+    <p
+      className="ProductDetails-Description"
+    >
+      description
+    </p>
+    <p
+      className="ProductDetails-Price fs-3"
+    >
+      $
+      1000
+    </p>
+    <p>
+      <button
+        className="ProductDetails-AddToCart btn btn-primary btn-lg"
+        onClick={[Function]}
+      >
+        Add to Cart
+      </button>
+      <CartBadge
+        id={1}
+      />
+    </p>
+    <dl>
+      <dt>
+        Color
+      </dt>
+      <dd
+        className="ProductDetails-Color text-capitalize"
+      >
+        red
+      </dd>
+      <dt>
+        Material
+      </dt>
+      <dd
+        className="ProductDetails-Material text-capitalize"
+      >
+        brick
+      </dd>
+    </dl>
+  </div>
+</div>
+`;

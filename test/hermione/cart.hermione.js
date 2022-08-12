@@ -20,9 +20,9 @@ describe('Корзина', async function() {
 
         const navbar = await this.browser.$(navbarNavSelector);
         await navbar.waitForExist({ timeout: 5000 });
-        const cartLinkTitle = await navbar.$(`.nav-link[href="${CART_PAGE}"]`).getText().toLowerCase();
+        const cartLinkTitle = await navbar.$(`.nav-link[href="${CART_PAGE}"]`).getText();
 
-        assert.equal(cartLinkTitle, 'cart');
+        assert.equal(cartLinkTitle.toLowerCase(), 'cart');
     });
 
     it('если корзина пустая, отображается ссылка на страницу "каталог"', async function() {
@@ -47,9 +47,9 @@ describe('Корзина', async function() {
         await buttonAddProduct.click();
         await buttonAddProduct.click();
 
-        const cartLinkTitle = await this.browser.$(`.nav-link[href="${CART_PAGE}"]`).getText().toLowerCase();
+        const cartLinkTitle = await this.browser.$(`.nav-link[href="${CART_PAGE}"]`).getText();
 
-        assert.equal(cartLinkTitle, 'cart (1)');
+        assert.equal(cartLinkTitle.toLowerCase(), 'cart (1)');
     });
 
     it('если добавить в корзину два разных товара, то в шапке будет цифра - два', async function() {
@@ -73,9 +73,9 @@ describe('Корзина', async function() {
         await buttonAddProduct.waitForExist({ timeout: 5000 });
         await buttonAddProduct.click();
 
-        const cartLinkTitle = await this.browser.$(`.nav-link[href="${CART_PAGE}"]`).getText().toLowerCase();
+        const cartLinkTitle = await this.browser.$(`.nav-link[href="${CART_PAGE}"]`).getText();
 
-        assert.equal(cartLinkTitle, 'cart (2)');
+        assert.equal(cartLinkTitle.toLowerCase(), 'cart (2)');
     });
 
     it('если добавить товар в корзину, то в корзине отображается таблица', async function() {

@@ -5,7 +5,8 @@
         "start": "nodemon ./src/server/index.ts",
         "test": "jest",
         "build": "webpack --mode=production --node-env=production",
-        "watch": "webpack --watch"
+        "watch": "webpack --watch",
+        "hermione": "hermione"
     },
     "dependencies": {
         "@bem-react/classname": "^1.5.12",
@@ -26,8 +27,12 @@
         "rxjs": "^7.4.0"
     },
     "devDependencies": {
+        "@babel/preset-env": "^7.18.10",
+        "@babel/preset-react": "^7.18.6",
+        "@babel/preset-typescript": "^7.18.6",
         "@types/express": "^4.17.13",
         "@types/faker": "^5.5.9",
+        "@types/jest": "^28.1.6",
         "@types/mini-css-extract-plugin": "^2.3.0",
         "@types/node": "^16.11.1",
         "@types/react": "^17.0.30",
@@ -36,9 +41,16 @@
         "@types/react-router": "^5.1.17",
         "@types/react-router-dom": "^5.3.1",
         "@types/webpack": "^5.28.0",
+        "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
+        "babel-jest": "^28.1.3",
         "css-loader": "^6.3.0",
+        "enzyme": "^3.11.0",
+        "enzyme-to-json": "^3.6.2",
+        "hermione": "^5.0.1",
+        "html-reporter": "^9.2.0",
         "html-webpack-plugin": "^5.3.2",
         "jest": "^27.3.0",
+        "jest-enzyme": "^7.1.2",
         "mini-css-extract-plugin": "^2.4.2",
         "nodemon": "^2.0.13",
         "sass": "^1.42.1",
@@ -49,5 +61,24 @@
         "typescript": "^4.4.4",
         "webpack": "^5.58.2",
         "webpack-cli": "^4.9.0"
+    },
+    "jest": {
+        "setupFilesAfterEnv": [
+            "<rootDir>/test/setupTests.js"
+        ],
+        "testPathIgnorePatterns": [
+            "<rootDir>/node_modules/"
+        ],
+        "snapshotSerializers": [
+            "enzyme-to-json/serializer"
+        ],
+        "testEnvironment": "jsdom"
+    },
+    "babel": {
+        "presets": [
+            "@babel/env",
+            "@babel/react",
+            "@babel/preset-typescript"
+        ]
     }
 }
